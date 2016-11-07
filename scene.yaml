@@ -1,8 +1,6 @@
 import: table_damage.yaml
 
 settings:
-#    data:
-#        - &osm_id [73988262]
     localization:
         #- &text_loc_country function() { return feature["name"]; }
         - &text_loc_country function() { return feature["name:en"] || feature["name"]; }
@@ -21,8 +19,8 @@ settings:
         - &raster_order 0
         - &lines_order_boundaries function() { return feature.sort_rank; }
         - &lines_order_water      function() { return feature.sort_rank; }
-#        - &lines_order_roads      function() { return feature.sort_rank; }
-#        - &lines_order_roads      400
+        #- &lines_order_roads      function() { return feature.sort_rank; }
+        #- &lines_order_roads      400
         - &text_order_places 2
         - &text_order_water  1
         - &text_buffer_places 25px
@@ -38,6 +36,13 @@ sources:
         min_zoom: 6
         max_zoom: 14
         bounds: [0.0000, 40.9799, 16.87499, 52.48278] # [w, s, e, n]
+
+#    aer:
+#        type: Raster
+#        url: http://tile.sentinelmap.eu/ita/ALL/{z}/{x}/{y}.png
+#        min_zoom: 17
+#        max_zoom: 20
+
     osm:
         type: TopoJSON
         url: http://tile.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-Y3DcPK9
@@ -47,6 +52,12 @@ sources:
 styles:
     sat-raster:
         base: raster
+
+#    aer-raster:
+#        base: raster
+#        blend: overlay
+#        blend_order: 3
+
     osm-polygons:
         base: polygons
     osm-polygons-overlay:
@@ -77,6 +88,14 @@ layers:
         draw:
             sat-raster:
                 order: *raster_order
+
+#    aerial:
+#        data: { source: aer }
+#        filter:
+#            $zoom: { min: 17 }
+#        draw:
+#            aer-raster:
+#                order: *raster_order
 
 ##=========================================================================
     boundaries:
