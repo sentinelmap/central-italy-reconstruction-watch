@@ -1,0 +1,22 @@
+layers:
+    buildings:
+        dam_no:
+            filter:
+                not:
+                    id: []
+                #not: { id: [] }
+        dam_collapsed:
+            filter:
+                id: []
+        dam_partially_collapsed:
+            filter:
+                id: []
+        dam_severe:
+            filter:
+                id: []
+        dam_moderate:
+            filter:
+                id: []
+        dam_negligible:
+            filter:
+                id: []
