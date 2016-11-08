@@ -8,9 +8,34 @@ var osmAttr = ' | © <a href="https://openstreetmap.org/copyright">OSM</a>' +
 
 var Attr = satAttr + osmAttr ;
 
+var OSM0 = '<a href="http://www.openstreetmap.org/way/'
+var OSM1 = '/" target="_blank">View on OSM</a> </br> </br>'
+var iD0 = '<a href="http://www.openstreetmap.org/edit?way='
+var iD1 = '" target="_blank">Edit with iD</a>'
+
 var scLayer = Tangram.leafletLayer({
     scene: 'scene.yaml',
-    attribution: Attr
+    attribution: Attr,
+    events: {
+	hover: function(selection) {
+	    if (selection.feature != null) {
+		document.getElementById('map').style.cursor = 'pointer'
+	    } else {
+		document.getElementById('map').style.cursor = ''
+	    }
+	},
+	click: function(selection) {
+	    console.log(selection);
+	    if (selection.feature != null) {
+		fid = String(selection.feature.properties.id);
+		latlng = selection.leaflet_event.latlng;
+		var popup = L.popup()
+		    .setLatLng(latlng)
+		    .setContent(OSM0 + fid + OSM1 + iD0 + fid + iD1)
+		    .openOn(map);
+	    } //end of if
+	} //end of click
+    } //end of events
 });
 
 var map = L.map('map' , {
@@ -29,3 +54,18 @@ var baseLayers = {
 };
 
 L.control.zoom({position: 'bottomleft'}).addTo(map);
+
+// DEBUG
+/* 
+scLayer.scene.subscribe({
+    load: function (e) {
+        console.log('scene loaded:', e);
+    }
+});
+
+scLayer.scene.subscribe({
+    view_complete: function () {
+	console.log('scene view complete');
+    }
+});
+*/
