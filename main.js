@@ -17,16 +17,17 @@ var scLayer = Tangram.leafletLayer({
     scene: 'scene.yaml',
     attribution: Attr,
     events: {
+	function() {
 	hover: function(selection) {
-	    if (selection.feature != null) {
+	    if (selection.feature != null & map.getZoom() >= 17) {
 		document.getElementById('map').style.cursor = 'pointer'
 	    } else {
 		document.getElementById('map').style.cursor = ''
 	    }
 	},
 	click: function(selection) {
-	    console.log(selection);
-	    if (selection.feature != null) {
+	    //console.log(selection);
+	    if (selection.feature != null & map.getZoom() >= 17) {
 		fid = String(selection.feature.properties.id);
 		latlng = selection.leaflet_event.latlng;
 		var popup = L.popup()
@@ -56,7 +57,7 @@ var baseLayers = {
 L.control.zoom({position: 'bottomleft'}).addTo(map);
 
 // DEBUG
-/* 
+/*
 scLayer.scene.subscribe({
     load: function (e) {
         console.log('scene loaded:', e);
