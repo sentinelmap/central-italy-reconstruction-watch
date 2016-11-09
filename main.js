@@ -53,7 +53,9 @@ var baseLayers = {
     "Sentinel-2": scLayer,
 };
 
-L.control.zoom({position: 'bottomleft'}).addTo(map);
+L.control.zoom({position: 'topright'}).addTo(map);
+
+var sidebar = L.control.sidebar('sidebar').addTo(map);
 
 // DEBUG
 /*

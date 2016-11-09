@@ -11,6 +11,23 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 > a {
+    text-decoration: none;
+    float: left;
+    color: #fff
+}
+
+/* li a:active,
+li a:hover {
+    background-color: #00d4aa;
+    color: #fff;
+}
+
+li a:focus {
+    background-color: #00aa88;
+    color: #fff;
+} */
+
 /*******************
 Map
 *******************/
@@ -20,8 +37,8 @@ html, .map-layout {
 .map-layout > #content {
     overflow: hidden;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 0px;
+    bottom: 0px;
     width: 100%;
 }
 .map-layout > #content > #map {
