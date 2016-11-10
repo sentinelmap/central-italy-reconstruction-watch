@@ -31,6 +31,15 @@ h1 > a {
     color: #fff
 }
 
+.sidebar-tabs figure {
+    position: absolute;
+    top: -12px;
+    left: -36px;
+}
+.sidebar-tabs img {
+    width: 32px;
+}
+
 /* li a:active,
 li a:hover {
     background-color: #00d4aa;
