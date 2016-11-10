@@ -47,13 +47,13 @@ var map = L.map('map' , {
     zoomControl: false
 });
 
-var hash = new L.Hash(map);
-
 var baseLayers = {
     "Sentinel-2": scLayer,
 };
 
 L.control.zoom({position: 'topright'}).addTo(map);
+
+var hash = new L.Hash(map);
 
 var sidebar = L.control.sidebar('sidebar').addTo(map);
 
