@@ -1,3 +1,4 @@
+/* Reset */
 html, body, div {
     margin: 0;
     padding: 0;
@@ -9,6 +10,19 @@ html, body, div {
 body {
     line-height: 1.4;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+/*****/
+
+html, body, #map {
+    height: 100%;
+    font-weight: 100;
+    font-family: 'Varela Round', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #eb2428;
 }
 
 h1 > a {
@@ -49,11 +63,13 @@ html, .map-layout {
 .custom .leaflet-popup-tip,
 .custom .leaflet-popup-content-wrapper {
     background: rgba(225,225,225,.8);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Varela Round', sans-serif;
     font-weight: bold;
     font-size: 16px;
     margin-top: 15px;
 }
 .leaflet-container a {
+    font-family: 'Varela Round', sans-serif;
     text-decoration: none;
+    color: #0a70ff;
 }
