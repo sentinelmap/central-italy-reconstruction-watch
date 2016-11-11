@@ -466,62 +466,74 @@ layers:
         data: { source: osm, layer: buildings }
         filter: { not: { osm_relation: true } } ## temporary fix
 
-        dam_no:
+        no_damage:
             draw:
                 osm-polygons-overlay:
                     interactive: true
-                    color: [[14, [.5, .5, .5, .9]], [16, [.5, .5, .5, .4]], [18, [.5, .5, .5, .1]]]
-                osm-lines-overlay:
-                    interactive: true
-                    color: [.5, .5, .5, 1]
-                    width: [[14, 0.1px], [16, 1.00px], [18, 3.00px]]
+                    color: [[14, [.68, .87, .56, .9]], [16, [.68, .87, .56, .7]], [18, [.68, .87, .56, .5]]]
+#                osm-lines-overlay:
+#                    interactive: true
+#                    color: [.68, .87, .56, 1]
+#                    width: [[14, 0.1px], [16, 1.00px], [18, 2.00px]]
 
-        dam_negligible:
+        negligible:
             draw:
                 osm-polygons-overlay:
                     interactive: true
-                    color: [[14, [1, 1, .7, .9]], [16, [1, 1, .7, .4]], [18, [1, 1, .7, .1]]]
-                osm-lines-overlay:
-                    interactive: true
-                    color: [1, 1, .7, 1]
-                    width: [[14, 0.1px], [16, 1.00px], [18, 3.00px]]
+                    color: [[14, [1, 1, .7, .9]], [16, [1, 1, .7, .7]], [18, [1, 1, .7, .5]]]
+#                osm-lines-overlay:
+#                    interactive: true
+#                    color: [1, 1, .7, 1]
+#                    width: [[14, 0.1px], [16, 1.00px], [18, 2.00px]]
 
-        dam_moderate:
+        moderate:
             draw:
                 osm-polygons-overlay:
                     interactive: true
-                    color: [[14, [1, .8, .36, .9]], [16, [1, .8, .36, .4]], [18, [1, .8, .36, .1]]]
-                osm-lines-overlay:
-                    interactive: true
-                    color: [1, .8, .36, 1]
-                    width: [[14, 0.1px], [16, 1.00px], [18, 3.00px]]
+                    color: [[14, [1, .8, .36, .9]], [16, [1, .8, .36, .7]], [18, [1, .8, .36, .5]]]
+#                osm-lines-overlay:
+#                    interactive: true
+#                    color: [1, .8, .36, 1]
+#                    width: [[14, 0.1px], [16, 1.00px], [18, 2.00px]]
 
-        dam_severe:
+        severe:
             draw:
                 osm-polygons-overlay:
                     interactive: true
-                    color: [[14, [.99, .55, .24, .9]], [16, [.99, .55, .24, .4]], [18, [.99, .55, .24, .1]]]
-                osm-lines-overlay:
-                    interactive: true
-                    color: [.99, .55, .24, 1]
-                    width: [[14, 0.1px], [16, 1.00px], [18, 3.00px]]
+                    color: [[14, [.99, .55, .24, .9]], [16, [.99, .55, .24, .7]], [18, [.99, .55, .24, .5]]]
+#                osm-lines-overlay:
+#                    interactive: true
+#                    color: [.99, .55, .24, 1]
+#                    width: [[14, 0.1px], [16, 1.00px], [18, 2.00px]]
 
-        dam_partially_collapsed:
+        partially_collapsed:
             draw:
                 osm-polygons-overlay:
                     interactive: true
-                    color: [[14, [.89, .1, .11, .9]], [16, [.89, .1, .11, .4]], [18, [.89, .1, .11, .1]]]
-                osm-lines-overlay:
-                    interactive: true
-                    color: [.89, .1, .11, 1]
-                    width: [[14, 0.1px], [16, 1.00px], [18, 3.00px]]
+                    color: [[14, [.89, .1, .11, .9]], [16, [.89, .1, .11, .7]], [18, [.89, .1, .11, .5]]]
+#                osm-lines-overlay:
+#                    interactive: true
+#                    color: [.89, .1, .11, 1]
+#                    width: [[14, 0.1px], [16, 1.00px], [18, 2.00px]]
 
-        dam_collapsed:
+        collapsed:
             draw:
                 osm-polygons-overlay:
                     interactive: true
-                    color: [[14, [.89, .1, .11, .9]], [16, [.89, .1, .11, .4]], [18, [.89, .1, .11, .1]]]
+                    color: [[14, [.89, .1, .11, .9]], [16, [.89, .1, .11, .7]], [18, [.89, .1, .11, .5]]]
+#                osm-lines-overlay:
+#                    interactive: true
+#                    color: [.89, .1, .11, 1]
+#                    width: [[14, 0.1px], [16, 1.00px], [18, 2.00px]]
+
+        unknown:
+            draw:
+                osm-polygons:
+                    interactive: true
+                    visible: true
+                    color: [.9, .9, .9]
                 osm-lines-overlay:
                     interactive: true
-                    color: [.89, .1, .11, 1]
-                    width: [[14, 0.1px], [16, 1.00px], [18, 3.00px]]
+                    visible: true
+                    color: [.3, .3, .3, .6]
+                    width: [[14, 0.1px], [16, 1.00px], [18, 2.00px]]
