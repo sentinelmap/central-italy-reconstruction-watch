@@ -8,7 +8,7 @@ var osmAttr = ' | © <a href="https://openstreetmap.org/copyright">OSM</a>' +
 
 var Attr = satAttr + osmAttr ;
 
-var tit = 'Damage: </br>'
+var tit = 'Earthquake damage: </br>'
 var OSM0 = '</br> <a href="http://www.openstreetmap.org/way/'
 var OSM1 = '/" target="_blank">View on OSM</a> </br>'
 var iD0 = '<a href="http://www.openstreetmap.org/edit?way='
