@@ -8,6 +8,7 @@ var osmAttr = ' | © <a href="https://openstreetmap.org/copyright">OSM</a>' +
 
 var Attr = satAttr + osmAttr ;
 
+var tit = 'Damage: </br>'
 var OSM0 = '</br> <a href="http://www.openstreetmap.org/way/'
 var OSM1 = '/" target="_blank">View on OSM</a> </br>'
 var iD0 = '<a href="http://www.openstreetmap.org/edit?way='
@@ -32,9 +33,10 @@ var scLayer = Tangram.leafletLayer({
 		bb = String(selection.feature.layers);
 		dam = String(bb.split('buildings:', 2)[1]);
 		dam = dam.replace(',', '');
+		dam = dam.replace('_damage', '');
 		var popup = L.popup({ className: 'custom' })
 		    .setLatLng(latlng)
-		    .setContent(dam + OSM0 + fid + OSM1 + iD0 + fid + iD1)
+		    .setContent(tit + dam + OSM0 + fid + OSM1 + iD0 + fid + iD1)
 		    .openOn(map);
 	    } //end of if
 	} //end of click
