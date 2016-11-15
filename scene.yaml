@@ -1,3 +1,18 @@
+# Central Italy reconstruction watch - Tangram scene
+# Copyright (C) 2016  Carlo Palermo
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 import: table_damage.yaml
 
 settings:
@@ -36,6 +51,7 @@ sources:
         min_zoom: 6
         max_zoom: 14
         bounds: [0.0000, 40.9799, 16.87499, 52.48278] # [w, s, e, n]
+        ##bounds: [12.8, 42.5, 13.5, 43.2] # [w, s, e, n]
 
 #    aer:
 #        type: Raster
