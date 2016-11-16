@@ -1,4 +1,4 @@
-## Central Italy Rebuilding Watch
+## Central Italy Reconstruction Watch
 
 Thanks to OpenStreetMap contributors, has been possible to build a crownsourced map of damaged towns and villages in the Apennine mountains, after the devastating series of earthquakes that hit central Italy betwen August and November 2016.
 
