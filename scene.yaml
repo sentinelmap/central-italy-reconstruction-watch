@@ -13,7 +13,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import: table_damage.yaml
+import: subset.yaml
 
 settings:
     localization:
@@ -480,7 +480,7 @@ layers:
 ## earthquake:damage
     buildings:
         data: { source: osm, layer: buildings }
-        filter: { not: { osm_relation: true } } ## temporary fix
+#        filter: { not: { osm_relation: true } } ## temporary fix
 
         no_damage:
             draw:
