@@ -51,7 +51,7 @@ sources:
         min_zoom: 6
         max_zoom: 14
         bounds: [0.0000, 40.9799, 16.87499, 52.48278] # [w, s, e, n]
-        ##bounds: [12.8, 42.5, 13.5, 43.2] # [w, s, e, n]
+#       bounds: [12.8, 42.5, 13.5, 43.2]
 
 #    aer:
 #        type: Raster
