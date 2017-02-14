@@ -62,7 +62,7 @@ sources:
 
     osm:
         type: TopoJSON
-        url: http://tile.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.topojson?api_key=mapzen-jooBoa9
+        url: https://tile.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.topojson?api_key=mapzen-jooBoa9
         max_zoom: 18
 
 ##=========================================================================
