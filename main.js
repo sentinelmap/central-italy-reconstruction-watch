@@ -56,7 +56,7 @@ var map = L.map('map' , {
     center: [ 42.629, 13.2872],
     zoom: 15,
     maxZoom: 18,
-    minZoom: 6,
+    minZoom: 5,
     layers: [scLayer],
     zoomControl: false
 });
