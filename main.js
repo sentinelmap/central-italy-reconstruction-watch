@@ -12,9 +12,9 @@ var Attr = satAttr + osmAttr ;
 // osm_relation: true, which can also be deduced from negative id values.
 
 var tit = 'Earthquake damage: </br>'
-var OSM0 = '</br> <a href="http://www.openstreetmap.org/'
+var OSM0 = '</br> <a href="https://www.openstreetmap.org/'
 var OSM1 = '/" target="_blank">View on OSM</a> </br>'
-var iD0 = '<a href="http://www.openstreetmap.org/edit?'
+var iD0 = '<a href="https://www.openstreetmap.org/edit?'
 var iD1 = '" target="_blank">Edit with iD</a>'
 
 var scLayer = Tangram.leafletLayer({
