@@ -18,7 +18,7 @@ var iD0 = '<a href="https://www.openstreetmap.org/edit?'
 var iD1 = '" target="_blank">Edit with iD</a>'
 
 var scLayer = Tangram.leafletLayer({
-    scene: 'scene.yaml',
+    scene: 'scene@1.0.yaml',
     attribution: Attr,
     events: {
 	hover: function(selection) {
