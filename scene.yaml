@@ -47,7 +47,7 @@ settings:
 sources:
     sat:
         type: Raster
-        url: http://tile.sentinelmap.eu/2016/summer/rgb/{z}/{x}/{y}.jpg
+        url: https://tile.sentinelmap.eu/2016/summer/rgb/{z}/{x}/{y}.jpg
         min_zoom: 5
         max_zoom: 14
         bounds: [0.0000, 40.9799, 22.49999, 55.77657] # [w, s, e, n]
