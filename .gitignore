@@ -2,6 +2,7 @@
 *~
 \#*\#
 .\#*
+*.min.js
 *.min.css
 lib/font-awesome-4.7.0/
 
