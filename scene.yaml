@@ -47,7 +47,7 @@ settings:
 sources:
     sat:
         type: Raster
-        url: https://tile.sentinelmap.eu/2016/summer/rgb/{z}/{x}/{y}.jpg
+        url: https://tile.sentinelmap.eu/2016/summer/rgb/{z}/{x}/{y}.jpg?key=<my-sentinelmap-key>
         min_zoom: 5
         max_zoom: 14
         bounds: [0.0000, 40.9799, 22.49999, 55.77657] # [w, s, e, n]
@@ -62,7 +62,7 @@ sources:
 
     osm:
         type: TopoJSON
-        url: https://tile.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.topojson?api_key=mapzen-jooBoa9
+        url: https://tile.mapzen.com/mapzen/vector/v1/all/{z}/{x}/{y}.topojson?api_key=<my-mapzen-key>
         max_zoom: 18
 
 ##=========================================================================
