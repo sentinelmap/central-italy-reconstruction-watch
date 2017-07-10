@@ -1,12 +1,10 @@
 var satAttr = 'Modified <a href="https://scihub.copernicus.eu/">Copernicus</a>' +
     ' Sentinel data 2016 by ' +
     '<a href="http://sentinelmap.eu">SentinelMap</a>' ;
-
 var osmAttr = ' | © <a href="https://openstreetmap.org/copyright">OSM</a>' +
     ' contributors data by ' +
     '<a href="https://mapzen.com">Mapzen</a>' ;
-
-var Attr = satAttr + osmAttr ;
+var attr = satAttr + osmAttr ;
 
 // https://mapzen.com/documentation/vector-tiles/layers/#boundaries-properties-optional
 // osm_relation: true, which can also be deduced from negative id values.
@@ -17,9 +15,13 @@ var OSM1 = '/" target="_blank">View on OSM</a> </br>'
 var iD0 = '<a href="https://www.openstreetmap.org/edit?'
 var iD1 = '" target="_blank">Edit with iD</a>'
 
-var scLayer = Tangram.leafletLayer({
-    scene: 'scene@1.1.yaml',
-    attribution: Attr,
+var layer = Tangram.leafletLayer({
+    scene: {
+	import: ['global.yaml'],
+	global: {'labels_overlay': true,
+		 'roads_overlay': true},
+    },
+    attribution: attr,
     events: {
 	hover: function(selection) {
 	    if (selection.feature != null & map.getZoom() >= 17) {
@@ -51,35 +53,32 @@ var scLayer = Tangram.leafletLayer({
 	} //end of click
     } //end of events
 });
+var scene = layer.scene;
 
 var map = L.map('map' , {
     center: [ 42.629, 13.2872],
     zoom: 15,
     maxZoom: 18,
     minZoom: 5,
-    layers: [scLayer],
+    layers: [layer],
     zoomControl: false
 });
-
-var baseLayers = {
-    "Sentinel-2": scLayer,
-};
-
-L.control.zoom({position: 'topright'}).addTo(map);
+L.control.zoom({position: 'bottomright'}).addTo(map);
 
 var hash = new L.Hash(map);
 
 var sidebar = L.control.sidebar('sidebar').addTo(map);
 
 // DEBUG
+
 /*
-scLayer.scene.subscribe({
+scene.subscribe({
     load: function (e) {
         console.log('scene loaded:', e);
     }
 });
 
-scLayer.scene.subscribe({
+scene.subscribe({
     view_complete: function () {
 	console.log('scene view complete');
     }
