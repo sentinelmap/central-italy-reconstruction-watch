@@ -3,7 +3,7 @@ var satAttr = 'Modified <a href="https://scihub.copernicus.eu/">Copernicus</a>' 
     '<a href="http://sentinelmap.eu">SentinelMap</a>' ;
 var osmAttr = ' | © <a href="https://openstreetmap.org/copyright">OSM</a>' +
     ' contributors data by ' +
-    '<a href="https://mapzen.com">Mapzen</a>' ;
+    '<a href="https://www.nextzen.org/">Nextzen</a>' ;
 var attr = satAttr + osmAttr ;
 
 // https://mapzen.com/documentation/vector-tiles/layers/#boundaries-properties-optional
